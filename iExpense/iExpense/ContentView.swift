@@ -48,7 +48,7 @@ struct ContentView: View {
     @State private var showingAddExpensse = false
     
     var totalAmount: Int {
-         var soma = 0
+        var soma = 0
         
         for i in expenses.items {
             soma += i.amount
@@ -60,31 +60,34 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name).font(.headline)
-                            Text(item.type).font(.subheadline)
+            VStack {
+                List {
+                    ForEach(expenses.items) { item in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.name).font(.headline)
+                                Text(item.type).font(.subheadline)
+                            }
+                            Spacer()
+                            Text(String(item.amount)).foregroundColor(item.amount < 200 ? .black : .red)
                         }
-                        Spacer()
-                        Text(String(item.amount))
-                    }
-                }.onDelete(perform: removeItems)
+                    }.onDelete(perform: removeItems)
+                    
+                }.navigationBarTitle("iExpense")
+                .navigationBarItems(trailing:
+                                        Button(action: {
+                                            self.showingAddExpensse = true
+                                        }) {
+                                            Image(systemName: "plus")
+                                        }).sheet(isPresented: $showingAddExpensse) {
+                                            AddView(expenses: self.expenses)
+                                        }
                 HStack {
-                    Text("Total:").font(.largeTitle)
+                    Text("Total:").font(.subheadline)
                     Spacer()
                     Text("\(self.totalAmount)")
-                }
-            }.navigationBarTitle("iExpense")
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                                        self.showingAddExpensse = true
-                                    }) {
-                                        Image(systemName: "plus")
-                                    }).sheet(isPresented: $showingAddExpensse) {
-                                        AddView(expenses: self.expenses)
-                                    }
+                }.padding().foregroundColor(.red)
+            }
         }
     }
     
