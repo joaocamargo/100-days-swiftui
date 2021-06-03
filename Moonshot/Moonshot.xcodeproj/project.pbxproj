@@ -20,6 +20,7 @@
 		050226362663FD5900AC0A90 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050226352663FD5900AC0A90 /* Mission.swift */; };
 		050226382663FD6500AC0A90 /* CrewRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050226372663FD6500AC0A90 /* CrewRole.swift */; };
 		05735EB0266503B100B11A5C /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05735EAF266503B100B11A5C /* MissionView.swift */; };
+		05B50C5026688C1600F05354 /* AustronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B50C4F26688C1600F05354 /* AustronautView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		050226352663FD5900AC0A90 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		050226372663FD6500AC0A90 /* CrewRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewRole.swift; sourceTree = "<group>"; };
 		05735EAF266503B100B11A5C /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		05B50C4F26688C1600F05354 /* AustronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AustronautView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				050226352663FD5900AC0A90 /* Mission.swift */,
 				050226372663FD6500AC0A90 /* CrewRole.swift */,
 				05735EAF266503B100B11A5C /* MissionView.swift */,
+				05B50C4F26688C1600F05354 /* AustronautView.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				0502262E2663CF1600AC0A90 /* Austronaut.swift in Sources */,
 				050226382663FD6500AC0A90 /* CrewRole.swift in Sources */,
 				050226302663CF7A00AC0A90 /* Bundle-Decodable.swift in Sources */,
+				05B50C5026688C1600F05354 /* AustronautView.swift in Sources */,
 				0502261C2663CE8900AC0A90 /* SceneDelegate.swift in Sources */,
 				0502261E2663CE8900AC0A90 /* ContentView.swift in Sources */,
 			);

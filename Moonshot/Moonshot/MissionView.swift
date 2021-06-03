@@ -25,24 +25,29 @@ struct MissionView: View {
                     Image(self.mission.image).resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.7)
-                    .padding(.top)
+                        .padding(.top)
                     Text(self.mission.description).padding()
                     
                     ForEach(self.astronauts, id: \.role) {
                         crewMember in
-                        HStack {
-                            Image(crewMember.astronaut.id).resizable().frame(width: 83, height: 60)
-                                .clipShape(Capsule()).overlay(Capsule().stroke(Color.primary,lineWidth: 1))
+                        NavigationLink(destination: AustronautView(astronaut: crewMember.astronaut)) {
                             
-                            VStack(alignment: .leading) {
-                                Text(crewMember.astronaut.name).font(.headline)
-                                Text(crewMember.role).foregroundColor(.secondary)
-                            }
-                            Spacer()
-                        }.padding(.horizontal)
+                            
+                            HStack {
+                                Image(crewMember.astronaut.id).resizable().frame(width: 83, height: 60)
+                                    .clipShape(Capsule()).overlay(Capsule().stroke(Color.primary,lineWidth: 1))
+                                
+                                VStack(alignment: .leading) {
+                                    Text(crewMember.astronaut.name).font(.headline)
+                                    Text(crewMember.role).foregroundColor(.secondary)
+                                }
+                                Spacer()
+                            }.padding(.horizontal)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Spacer(minLength: 25)
                     }
-                    
-                    Spacer(minLength: 25)
                 }
             }
         }.navigationBarTitle(Text(mission.displayName),displayMode: .inline)
