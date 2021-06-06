@@ -8,9 +8,7 @@
         <attribute name="review" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Entity1" representedClassName="Entity1" syncable="YES" codeGenerationType="class"/>
     <elements>
         <element name="Book" positionX="-54" positionY="-9" width="128" height="119"/>
-        <element name="Entity1" positionX="-36" positionY="9" width="128" height="29"/>
     </elements>
 </model>
